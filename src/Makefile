@@ -33,12 +33,12 @@
 
 # I finally know why Larry Wall's Makefile says "Grrrr".
 SHELL=/bin/sh
-
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/tirpc/
 CC=`../scripts/compiler`
 MAKE=`../scripts/make`
 AR=ar
 ARCREATE=cr
-
+LDFLAGS=-ltirpc
 # base of installation location
 BASE=/usr/local
 O= ../bin/unknown
